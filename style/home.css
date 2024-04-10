@@ -328,7 +328,7 @@ a {
 }
 @media (min-width: 1024px) {
   .restaurants__card {
-    width: 42%;
+    width: 44%;
   }
 }
 .restaurants__card img {
@@ -369,4 +369,64 @@ a {
   position: absolute;
   bottom: 33px;
   right: 28px;
+}
+
+.footer__container {
+  padding: 22px 25px;
+  background-color: #353535;
+  color: var(--white);
+}
+@media (min-width: 768px) {
+  .footer__container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    padding: 30px 25px;
+  }
+}
+.footer__logo {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.625rem;
+  font-family: "Shrikhand", serif;
+  margin-bottom: 16px;
+}
+@media (min-width: 768px) {
+  .footer__logo {
+    margin: 0 41px 0 16px;
+    position: relative;
+    bottom: 4px;
+  }
+}
+.footer__list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  list-style: none;
+}
+@media (min-width: 768px) {
+  .footer__list-container {
+    flex-direction: row;
+  }
+}
+.footer__list-container__fa-utensils {
+  margin-right: 11px;
+  width: 11px;
+  height: 13px;
+}
+.footer__list-container__fa-handshake-angle {
+  margin-right: 10.08px;
+  width: 11.9177px;
+  height: 13px;
+}
+.footer__list-container__item2 {
+  margin-right: 37px;
+}
+.footer__list-container__item3 {
+  font-weight: 400;
+  margin-right: 9px;
+}
+.footer__list-container__item4 {
+  font-weight: 400;
+  margin-right: 74px;
 }/*# sourceMappingURL=home.css.map */
