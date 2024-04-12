@@ -66,8 +66,6 @@ h3 {
 
 .main-container {
   width: 100%;
-  max-width: 1440px;
-  min-width: 320px;
   box-sizing: border-box;
 }
 
@@ -106,7 +104,7 @@ h3 {
   border-top-right-radius: 45px;
   position: relative;
   bottom: 45px;
-  //width: 100%;
+
 }
 
 .title__container {
@@ -120,7 +118,10 @@ h3 {
 .menu {
   padding: 0 13px 40px 13px;
   box-sizing: border-box;
-  //width: 100%;
+
+  @media (min-width: 768px) {
+    padding: 0 20% 40px 20%
+  }
 
   &__part {
     width: 100%;
@@ -151,7 +152,6 @@ h3 {
     flex-direction: column;
     justify-content: center;
     box-sizing: border-box;
-    //width: 100%;
 
     &--last {
       margin-bottom: 0;
