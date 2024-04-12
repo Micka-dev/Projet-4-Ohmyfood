@@ -109,6 +109,9 @@ h3 {
   background-color: var(--bg-secondary);
   padding: 15px 0;
 }
+.intro__text-entry:focus-visible {
+  outline: 0;
+}
 .intro__title {
   margin-bottom: 21px;
 }
