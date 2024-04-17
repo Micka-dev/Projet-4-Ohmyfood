@@ -146,13 +146,20 @@ h3 {
   justify-content: space-between;
   align-items: flex-end;
   box-sizing: border-box;
+  cursor: pointer;
 }
 .menu__partDish--last {
   margin-bottom: 0;
 }
+.menu__partDish:hover .menu__selection-button {
+  width: 59px;
+}
+.menu__partDish:hover .menu__selection-button-icon {
+  color: white;
+}
 .menu__canister {
   padding: 15px 0 15px 15px;
-  width: 93%;
+  width: 95%;
   overflow: hidden;
 }
 .menu__dishTitle {
@@ -171,7 +178,7 @@ h3 {
   padding: 0 15px 15px 5px;
 }
 .menu__selection-button {
-  width: 59px;
+  width: 0px;
   height: 69px;
   display: flex;
   justify-content: center;
@@ -179,9 +186,14 @@ h3 {
   background-color: var(--tertiary-color);
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+  transition: all 300ms;
 }
 .menu__selection-button-icon {
-  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  color: transparent;
 }
 
 .command-container {
