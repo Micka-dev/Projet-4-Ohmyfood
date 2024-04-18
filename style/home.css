@@ -55,6 +55,63 @@ h3 {
   color: var(--black);
 }
 
+.loader__container {
+  position: fixed;
+  z-index: 1;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  width: 100vh;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: loader__end 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+}
+
+.loader {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border-top: 20px solid #9356DC;
+  border-right: 20px solid transparent;
+  animation: loader 1s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.loader::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border-left: 20px solid #FF79DA;
+  border-bottom: 20px solid transparent;
+  animation: loader 0.5s linear infinite reverse;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader__end {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
 .main-container {
   width: 100%;
   box-sizing: border-box;
