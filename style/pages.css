@@ -122,11 +122,11 @@ h3 {
   width: 100%;
   max-width: 635px;
   margin: 0 auto;
+  position: relative;
 }
 .menu__partTitle {
   margin-top: 40px;
   margin-bottom: 21px;
-  position: relative;
 }
 .menu__line {
   width: 40px;

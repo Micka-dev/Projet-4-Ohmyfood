@@ -133,12 +133,12 @@ h3 {
     width: 100%;
     max-width: 635px;
     margin: 0 auto;
+    position: relative;
   }
 
   &__partTitle {
     margin-top: 40px;
     margin-bottom: 21px;
-    position: relative;
   }
 
   &__line {
@@ -175,15 +175,6 @@ h3 {
     &:hover .menu__selection-button-icon {
       color: white;
     }
-
-    //other method
-    // &:hover .menu__selection-button {
-    //   transform: scale(1);
-    // }
-
-    // &:hover .menu__price {
-    //   transform: translate(0);
-    // }
   }
 
   &__canister {
@@ -208,17 +199,10 @@ h3 {
   &__price {
     font-weight: 700;
     padding: 0 15px 15px 5px;
-
-    // other method
-    // transform: translate(45px);
-    // transition: transform 300ms ease-in-out;
   }
 
   &__selection-button {
-    // other method:
-    //width: 59px;
     width: 0px;
-
     height: 69px;
     display: flex;
     justify-content: center;
@@ -226,12 +210,7 @@ h3 {
     background-color: var(--tertiary-color);
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-
     transition: all 300ms;
-    // other method
-    // transform: scale(0,1);
-    // transform-origin: right;
-    // transition: transform 250ms ease-in-out;
 
     &-icon {
       display: flex;
@@ -240,8 +219,6 @@ h3 {
       padding: 0 15px;
 
       color: transparent;
-      // other method
-      // color: white;
     }
   }
 }
