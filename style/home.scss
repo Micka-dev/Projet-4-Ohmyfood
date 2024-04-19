@@ -67,45 +67,63 @@ h3 {
 
 .loader__container {
   position: fixed;
-  // top:0;
-  // bottom: 0;
-  // left: 0;
-  // right: 0;
+  // (top:0; bottom: 0; left: 0; right: 0; => l'ensemble correspond à inset:0;)
   z-index: 1;
-  backdrop-filter: blur(2px);
-  width: 100vh; //100% de la fenêtre, permet de centrer le loader en permanence même quand on scrolle
+  backdrop-filter: blur(3px);
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: loader__end 3s; 
-  animation-fill-mode: forwards; //permet d'arrêter complètement et de ne pas refaire un cycle d'animation après les 3s de délais
-  animation-delay: 3s; // permet de commencer l'animation de fin après l'animation principale de 3s
+  animation: loader__end 1s;
+  animation-fill-mode: forwards; // (permet d'arrêter complètement et de ne pas refaire un cycle d'animation après les 3s de délais)
+  animation-delay: 3s; // (permet de commencer l'animation de fin après l'animation principale qui dure 3s)
 }
 
 .loader {
-  width: 280px;
-  height: 280px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
-  border-top: 20px solid #9356DC;
-  border-right: 20px solid transparent; //permet d'obtenir une forme différente à l'arc de cercle
-  animation: loader 1s linear infinite; //animation 1er arc de cercle
+  border-top: 20px solid #9356dc;
+  border-right: 20px solid transparent; // (permet de donner une forme différente à l'arc de cercle)
+  animation: loader 1s ease-out infinite; // (animation 1er arc de cercle)
   display: flex;
   justify-content: center;
-  align-items: center; //permet de centrer l'animation font awesome codé dans le html
+  align-items: center; // (permet de centrer l'animation font awesome codé dans le html)
   position: relative;
-}
-.loader::after {
-  content: '';  
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
-  border-left: 20px solid #FF79DA;
-  border-bottom: 20px solid transparent;
-  animation: loader 0.5s linear infinite reverse;
+
+  @media (min-width: 768px) {
+    width: 280px;
+    height: 280px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border-left: 20px solid #ff79da;
+    border-bottom: 20px solid transparent;
+    animation: loader 0.5s linear infinite reverse;
+
+    @media (min-width: 768px) {
+      width: 280px;
+      height: 280px;
+    }
+  }
+
+  &__icon {
+    color: #99e2d0;
+    font-size: 5em;
+    animation: icon 0.5s ease-in-out alternate-reverse infinite;
+
+    @media (min-width: 768px) {
+      font-size: 10em;
+    }
+  }
 }
 
 @keyframes loader {
@@ -115,22 +133,29 @@ h3 {
   100% {
     transform: rotate(360deg);
   }
-} 
+}
+@keyframes icon {
+  0% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
-@keyframes loader__end{
+@keyframes loader__end {
   0% {
     transform: scale(0);
   }
   100% {
     transform: scale(0);
   }
-} 
-
+}
 
 .main-container {
   width: 100%;
   box-sizing: border-box;
- }
+}
 
 // header
 
@@ -240,8 +265,8 @@ h3 {
 
 .functioning {
   background-color: var(--white);
-  
-   &__main-container {
+
+  &__main-container {
     padding: 0 20px 0 32px;
     width: 100%;
     box-sizing: border-box;
@@ -361,7 +386,7 @@ h3 {
   }
 
   &__card {
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
     margin: 0 3px;
     position: relative;
 
@@ -419,13 +444,15 @@ h3 {
   }
 }
 
+// heart animation => code in "main css"
+
 // footer
 
 .footer {
   &__super-container {
-  background-color: #353535;
-  display: flex;
-  justify-content: center;
+    background-color: #353535;
+    display: flex;
+    justify-content: center;
   }
 
   &__main-container {
