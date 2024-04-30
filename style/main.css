@@ -53,6 +53,8 @@ a {
 
 .fa-heart {
   cursor: pointer;
+  line-height: normal;
+  display: inline;
 }
 
 .fa-heart:hover {
@@ -62,7 +64,7 @@ a {
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
-  animation: full 0.2s;
+  animation: full 0.3s ease-in-out;
 }
 
 @keyframes full {
