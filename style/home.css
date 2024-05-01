@@ -420,7 +420,8 @@ h3 {
   font-size: 14px;
   border-radius: 2px;
 }
-.restaurants__card-content__card-rating {
+
+.fa-heart {
   position: absolute;
   bottom: 33px;
   right: 28px;

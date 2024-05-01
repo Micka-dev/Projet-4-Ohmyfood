@@ -454,13 +454,13 @@ h3 {
       font-size: 14px;
       border-radius: 2px;
     }
-
-    &__card-rating {
-      position: absolute;
-      bottom: 33px;
-      right: 28px;
-    }
   }
+}
+
+.fa-heart {
+  position: absolute;
+  bottom: 33px;
+  right: 28px;
 }
 
 // heart animation => code in "main css"
